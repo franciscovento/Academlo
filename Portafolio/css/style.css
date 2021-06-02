@@ -178,6 +178,31 @@ header {
     
 }
 
+@media screen and (max-width:540px){
+
+    .hero__texto h1 {
+        font-size: 4.2em;
+    }
+
+    .hero-imagen-card1{ 
+        right: -12px;
+        top: 34px;
+        
+    }
+    
+    .hero-imagen-card2{   
+        left: -15px;
+        bottom: 60px;
+        
+    }
+    
+    .hero-imagen-card3{ 
+        right: -8px;
+        top: 277px;
+       
+    }
+}
+
 .hero__texto h3{
     color: blue;
 }
@@ -439,10 +464,12 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+    
 }
 
+
 .contratame-contenedor{
-    height: 370px;
+    min-height: 370px;
     align-items: center;
     flex-wrap: wrap;
 }
