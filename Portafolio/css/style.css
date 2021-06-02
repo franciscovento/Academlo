@@ -15,6 +15,7 @@ header {
     z-index: 1;
 }
 
+
 .header-contenedor{
     width: 90%;
     margin: auto;
@@ -55,7 +56,9 @@ header {
 
 .menu-responsive{
     display: none;
+    
 }
+
 
     @media screen and (max-width: 900px) {
         .button-menu{
@@ -68,6 +71,11 @@ header {
             display: none;
             flex-grow: 0;
             width: 100%;
+            
+        }
+
+        .open-menu-responsive{
+            display: block;
             
         }
 
@@ -84,6 +92,15 @@ header {
         .nav{
             justify-content: space-between;
         }
+    }
+
+    .fas{
+        font-size: 2em;
+        transition: 0.7s;
+    }
+    
+    .fas:hover{
+        transform: scale(0.9);
     }
 
 

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Francisco Vento - Portafolio</title>
 </head>
 <body>
@@ -19,10 +20,10 @@
     <div class="header-contenedor">
     <nav class="nav d-flex">
         <div class="logo"><p>Francisco Vento</p></div>
-        <div class="menu-responsive">
-            <button>Menu</button>
+        <div class="menu-responsive open-menu-responsive" id="responsive-menu-btn">
+            <span><i class="fas fa-bars"></i></span>
         </div>
-        <div class="menu">
+        <div class="menu" id="main-menu">
             <ul class="d-flex">
                 <a href="#inicio"><li>Inicio</li></a>
                 <a href="#experiencia"><li>Experiencia</li></a>
@@ -32,7 +33,7 @@
             </ul>
         </div>
         <div class="button-menu ">
-            <button class="button-cta">Contratame</button>
+            <a href="#contacto"><button class="button-cta">Contactar</button></a>
         </div>
     </nav>
     </div>
@@ -242,5 +243,7 @@
     </div>
 </section>
 
+
+<script src="/js/main-menu.js"></script>
 </body>
 </html>
