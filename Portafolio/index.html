@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/animaciones.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Francisco Vento - Portafolio</title>
 </head>
@@ -64,8 +65,8 @@
 <section id="experiencia" class="section_experiencia">
     <div class="container d-flex s-around row">
         <div id="experiencia_id" class="skills col-5">
-            <h4 class="c-principal">Experiencia</h4>
-            <h3 class="skills___title">Mi experiencia profesional y habilidades desarrolladas</h3>
+            <h4 class="c-principal entradaIzquierda">Experiencia</h4>
+            <h3 class="skills___title entradaIzquierda">Mi experiencia profesional y habilidades desarrolladas</h3>
             <ul>
                 <li>Javascript</li>
                 <div class="row">
@@ -97,9 +98,10 @@
                 </div>
             </ul>
         </div>
-       <a href="https://aayllu.com/" target="_blank">
+       
         <div id="timeline_id" class="timeline d-flex col-5">
-            <div class="timeline___card">
+        <a href="https://aayllu.com/" target="_blank">
+            <div class="timeline___card entradaDerecha">
                 <div class="timeline___card1">
                 <h5 class="año-card c-principal">2019</h5>
                 <p class="titulo-card">Ayllu Blog<p>
@@ -108,7 +110,7 @@
             </div>
         </a>
         <a href="https://granappletours.com/" target="_blank">
-            <div class="timeline___card">
+            <div class="timeline___card entradaDerecha">
                 <div class="timeline___card1">
                     <h5 class="año-card c-principal">2020</h5>
                     <p class="titulo-card">Gran Apple Tours<p>
@@ -117,7 +119,7 @@
             </div>
         </a>
         <a href="https://toursdeae.com/" target="_blank">
-            <div class="timeline___card">
+            <div class="timeline___card entradaDerecha">
                 <div class="timeline___card1">
                     <h5 class="año-card c-principal">2021</h5>
                     <p class="titulo-card">De Extremo a Extremo<p>
@@ -134,13 +136,13 @@
 <section id = "servicios" class="section_servicios">
 <div class="row container s-around d-flex">
     <div id = "servicios-texto" class= "servicios-texto col-3">
-        <h4 class="c-principal">Servicios</h4>
-        <h3 class="servicios___title">Servicios que ofrezco según mi experiencia</h3>
-        <button class="button-cta button_secondary">Ver todos</button>
+        <h4 class="c-principal entradaIzquierda">Servicios</h4>
+        <h3 class="servicios___title entradaIzquierda">Servicios que ofrezco según mi experiencia</h3>
+        <button class="button-cta button_secondary entradaDerecha">Ver todos</button>
     </div>
 
     <div id = "servicios-iconos" class="col-7 d-flex servicios-iconos">
-        <div class="servicios-iconos___caja servicios-iconos___caja1">
+        <div class="servicios-iconos___caja servicios-iconos___caja1 entradaIzquierda">
             <div class="imagen-icono">
                 <img src="imagenes/icono1.png" alt="">
             </div>
@@ -167,7 +169,7 @@
                 <p>Bases de datos, CMS Wordpress, Servidor Web Apache, etc.</p>
             </div>
         </div>
-        <div class="servicios-iconos___caja servicios-iconos___caja4">
+        <div class="servicios-iconos___caja servicios-iconos___caja4 entradaDerecha">
             <div class="imagen-icono">
                 <img src="imagenes/icono4.png" alt="">
             </div>
@@ -192,10 +194,10 @@
 
     <div class="portafolio-imagenes d-flex">
      
-        <div class="portafolio-imagenes-item portafolio-imagenes-item-1"></div>
-        <div class="portafolio-imagenes-item portafolio-imagenes-item-2"></div>
-        <div class="portafolio-imagenes-item portafolio-imagenes-item-3"></div>
-        <div class="portafolio-imagenes-item portafolio-imagenes-item-4"></div>
+        <div class="portafolio-imagenes-item portafolio-imagenes-item-1 "></div>
+        <div class="portafolio-imagenes-item portafolio-imagenes-item-2 "></div>
+        <div class="portafolio-imagenes-item portafolio-imagenes-item-3 "></div>
+        <div class="portafolio-imagenes-item portafolio-imagenes-item-4 "></div>
         
     </div>
 
@@ -207,12 +209,12 @@
 
     <div class="contratame-contenedor container row s-around d-flex">
         <div id="contratame__texto" class= "contratame-texto col-5">
-            <h2  class="contratame___title">¿Interesado en trabajar juntos?</h2>
+            <h2  class="contratame___title entradaArriba">¿Interesado en trabajar juntos?</h2>
         </div>
     
         <div id="contratame-parrafo" class="contratame-parrafo col-7">
-            <p>Continuamente aprendiendo y adquiriendo nuevas habilidades en función a las actuales y futuras demandas y tendencias tecnológicas en el campo del diseño y desarrollo de aplicaciones web en general.</p>
-            <button class="button-cta">Hire me</button> <button class="button-cta button_secondary">Descargar CV</button>
+            <p class="entradaIzquierda">Continuamente aprendiendo y adquiriendo nuevas habilidades en función a las actuales y futuras demandas y tendencias tecnológicas en el campo del diseño y desarrollo de aplicaciones web en general.</p>
+            <button class="button-cta entradaDerecha">Hire me</button> <button class="button-cta button_secondary entradaDerecha">Descargar CV</button>
         </div>
     </div>
     
@@ -245,5 +247,6 @@
 
 
 <script src="js/main-menu.js"></script>
+<script src="js/animaciones.js"></script>
 </body>
 </html>

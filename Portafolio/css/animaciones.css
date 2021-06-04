@@ -1,0 +1,60 @@
+/* Animaciones para entrada de elementos estilos */
+
+.entradaIzquierda { 
+    opacity : 0;
+    transition: all 1.5s;
+
+}
+
+.entradaDerecha { 
+    opacity : 0;
+    transition: all 1.5s;
+
+}
+
+.entradaArriba { 
+    opacity : 0;
+    transition: all 1.5s;
+
+}
+
+/* animaciones */
+
+.mostrarArriba{
+    animation: mostrarArriba 1.5s;
+}
+
+@keyframes mostrarArriba {
+0%{
+    transform: translateY(300px)
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+.mostrarDerecha{
+    animation: mostrarDerecha 1.5s;
+}
+
+@keyframes mostrarDerecha {
+0%{
+    transform: translateX(300px)
+}
+100% {
+    transform: translateX(0);
+}
+}
+
+.mostrarIzquierda{
+    animation: mostrarIzquierda 1.5s;
+}
+
+@keyframes mostrarIzquierda {
+0%{
+    transform: translateX(-300px)
+}
+100% {
+    transform: translateX(0);
+}
+}
