@@ -4,7 +4,7 @@ function mostrarScrollIzquierda(){
     let scrollTop = document.documentElement.scrollTop;
     for ( let i = 0; i < entradaIzquierda.length; i++ ){
         let alturaAnimado = entradaIzquierda[i].offsetTop;
-        if(alturaAnimado - 500 < scrollTop){
+        if(alturaAnimado - 1000 < scrollTop){
             entradaIzquierda[i].style.opacity = 1;
             entradaIzquierda[i].classList.add("mostrarIzquierda");
         }
@@ -17,7 +17,7 @@ function mostrarScrollDerecha(){
     let scrollTop = document.documentElement.scrollTop;
     for ( let i = 0; i < entradaDerecha.length; i++ ){
         let alturaAnimado = entradaDerecha[i].offsetTop;
-        if(alturaAnimado - 500 < scrollTop){
+        if(alturaAnimado - 1000 < scrollTop){
             entradaDerecha[i].style.opacity = 1;
             entradaDerecha[i].classList.add("mostrarDerecha");
         }
@@ -30,7 +30,7 @@ function mostrarScrollArriba(){
     let scrollTop = document.documentElement.scrollTop;
     for ( let i = 0; i < entradaArriba.length; i++ ){
         let alturaAnimado = entradaArriba[i].offsetTop;
-        if(alturaAnimado - 500 < scrollTop){
+        if(alturaAnimado - 1000 < scrollTop){
             entradaArriba[i].style.opacity = 1;
             entradaArriba[i].classList.add("mostrarArriba");
         }
