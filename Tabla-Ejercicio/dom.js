@@ -73,19 +73,26 @@ function createTable(userlist){
 
             let userRedes = document.createElement("ul");
 
-            let userFila = document.createElement("li");
-            userFila.innerText = userlist[i].social[0].name + ": " + userlist[i].social[0].url;
+            for (let index = 0; index < userlist[i].social.length; index++) {
+                let userFila = document.createElement("li");
+                userFila.innerText = userlist[i].social[index].name + ": " + userlist[i].social[index].url;
+                userRedes.appendChild(userFila);
+                
+            }
 
-            let userFila2 = document.createElement("li");
-            userFila2.innerText = userlist[i].social[1].name + ": " + userlist[i].social[1].url;
+            //let userFila = document.createElement("li");
+            //userFila.innerText = userlist[i].social[0].name + ": " + userlist[i].social[0].url;
+
+            //let userFila2 = document.createElement("li");
+            //userFila2.innerText = userlist[i].social[1].name + ": " + userlist[i].social[1].url;
 
             newRow.appendChild(userName);
             newRow.appendChild(userEmail);
             newRow.appendChild(userEdad);
             newRow.appendChild(userSexo);
             newRow.appendChild(userRedes);
-            userRedes.appendChild(userFila);
-            userRedes.appendChild(userFila2);
+            //userRedes.appendChild(userFila);
+            //userRedes.appendChild(userFila2);
         }
             
     }
