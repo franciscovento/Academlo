@@ -17,14 +17,19 @@ let usersList = [
   }
 ];
 
+
+updateFlag = false;
+updateIndex = null;
+
 //Varible que va a guardar el elemento HTML en el que vamos a hacer render de nuestro array
 let userListUI = document.getElementById("userList");
+const userForm = document.getElementById("addUser");
 
 const renderList = () => {
-  //   userListUI.innerHTML = "";
+  userListUI.innerHTML = "";
   userListArray = usersList;
 
-  userListArray.forEach(user => {
+  userListArray.forEach((user, index) => {
     //Creamos el contenedor principal que va a ser la fila de cada usuario
     const userItemDiv = document.createElement("div");
     userItemDiv.setAttribute("class", "userItem");
@@ -54,9 +59,7 @@ const renderList = () => {
 
     //Agregamos una clase, un id y un addEventListener
     updateBtn.setAttribute("class", "update");
-    updateBtn.addEventListener("click", () =>
-      console.log("Este botón sirve para editar")
-    );
+    updateBtn.addEventListener("click",() => updateUser(index, user));
     updateBtn.setAttribute("id", "update");
     updateBtn.innerText = "Editar";
 
@@ -65,9 +68,7 @@ const renderList = () => {
 
     //Agregamos una clase, un id, y un addEventListener
     deleteBtn.setAttribute("class", "delete");
-    deleteBtn.addEventListener("click", () =>
-      console.log("Sirve para borrar un elemento")
-    );
+    deleteBtn.addEventListener("click", () => deleteUser(index));
     deleteBtn.innerHTML = "Eliminar";
     deleteBtn.setAttribute("id", "delete");
 
@@ -77,4 +78,52 @@ const renderList = () => {
   });
 };
 
+
+const createUser = event => {
+  event.preventDefault();
+
+  if(updateFlag){
+
+    let updatedUser = {
+      name: document.getElementById("name").value,
+      lastName:document.getElementById("lastname").value ,
+      email: document.getElementById("email").value
+    }
+    
+    usersList[updateIndex] = updatedUser;
+
+    updateFlag = false;
+    updateIndex = null;
+    renderList();
+
+  } else {
+    let user = {
+      name: document.getElementById("name").value,
+      lastName: document.getElementById("lastname").value,
+      email: document.getElementById("email").value
+    };
+    usersList.push(user);
+    renderList();
+  }
+  userForm.reset();
+}
+//Funcion para editar usuarios
+
+const updateUser = (index, user) => {
+  console.log(index);
+  console.log(user);
+  document.getElementById("name").value = user.name;
+  document.getElementById("lastname").value = user.lastName;
+  document.getElementById("email").value = user.email;
+  updateFlag = true;
+  updateIndex = index;
+}
+
+//Funcion para eliminar usuarios
+const deleteUser = (index) => {
+  usersList.splice(index,1);
+  renderList();
+}
+
+userForm.addEventListener("submit", createUser);
 document.addEventListener("DOMContentLoaded", renderList);
