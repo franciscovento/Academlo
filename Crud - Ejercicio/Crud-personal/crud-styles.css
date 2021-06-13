@@ -8,6 +8,18 @@
     color: #292928;
 }
 
+h2 {
+    /* font-size: 18px; */
+    /* font-weight: 600; */
+    /* line-height: 20px; */
+}
+
+@media screen and (max-width: 750px ) {
+    h2 {
+        font-size: 18px;
+    }
+}
+
 .container, #container-tarjetas{
     width: 90%;
     margin: auto;
@@ -79,7 +91,7 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 150px;
-    background-color: seashell; 
+    /* background-color: seashell;  */
     justify-content: center;
     border-radius: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -96,6 +108,7 @@
     .Tarjeta-datos{
         flex-direction: column;
         align-items: flex-start;
+        gap: 5px;
     }
     .Tarjeta{
         margin-top: 20px;
@@ -106,4 +119,5 @@
     flex-grow: 1;
     padding-left: 20px;
 }
+
 

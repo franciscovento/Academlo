@@ -116,6 +116,7 @@ const createUser = event => {
   }
   userForm.reset();
 }
+
 //Funcion para editar usuarios
 
 const updateUser = (index, user) => {
@@ -136,3 +137,5 @@ const deleteUser = (index) => {
 
 userForm.addEventListener("submit", createUser);
 document.addEventListener("DOMContentLoaded", renderList);
+
+
