@@ -25,10 +25,17 @@ updateIndex = null;
 let userListUI = document.getElementById("userList");
 const userForm = document.getElementById("addUser");
 
+
+//Primera función para leer y mostrar en el div, los valores del array principal
 const renderList = () => {
+
+  // limpiar el div principal antes de inicar el ciclo for
   userListUI.innerHTML = "";
+  // asignamos el array a otra variable (innecesario pero ahi va)
   userListArray = usersList;
 
+
+  // recorremos el arreglo para mostrar cada elemenot del mismo
   userListArray.forEach((user, index) => {
     //Creamos el contenedor principal que va a ser la fila de cada usuario
     const userItemDiv = document.createElement("div");
@@ -80,6 +87,8 @@ const renderList = () => {
 
 
 const createUser = event => {
+
+  //Evita que se recargue la página al darle submit al formulario
   event.preventDefault();
 
   if(updateFlag){

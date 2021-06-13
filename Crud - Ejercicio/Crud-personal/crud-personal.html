@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud-styles.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CRUD - Francisco Vento</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title">
+          <h3>
+            <span class="material-icons">
+                directions_car
+                </span>
+            CRUD Automoviles - Vanilla Js
+          </h3>
+        </div>
+        
+        <form action="" id="Formulario">
+            <div class="inputs-section">
+              <input class="input" type="text" placeholder="Nombre del Auto" id="name" />
+              <input class="input" type="text" placeholder="Año del modelo" id="model"/>
+              <input class="input" type="text" placeholder="Número de puertas" id="doors" />
+              <input class="input" type="text" placeholder="Color del auto" id="color" />
+              <input class="input" type="text" placeholder="Marca del auto" id="brand" />
+            </div>
+            <div class="btn-section">
+              <button type="submit" class="btns BtnGuardar" id="BtnGuardar">Guardar Auto</button>
+              <button type="button" class="btns btns_secondary BtnVer" id="BtnVer">Ver Autos</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="container-tarjetas">
+       
+       
+    </div>
+
+     <!-- <div class="Tarjeta">
+            <div class="Tarjeta-datos">
+                <h2 class="item">BMW Serie 5</h2>
+                <h2 class="item">2021</h2>
+                <h5 class="item">Número de puertas: 5</h5>
+                <h2 class="item">Rojo</h2>
+                <h2 class="item">BMW</h2>
+            </div>
+            <div class="Tarjeta-Btns">
+                <button class="item-1 btns btns_secondary BtnEditar" id="BtnEditar"><span class="material-icons">edit</span></button>
+                <button class="item-1 btns BtnEliminar" id="BtnEliminar"><span class="material-icons icons-2">delete</span></button>
+            </div>
+        </div> -->
+    <script src="crud-js.js"></script>
+</body>
+</html>
