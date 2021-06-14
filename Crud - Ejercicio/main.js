@@ -120,8 +120,6 @@ const createUser = event => {
 //Funcion para editar usuarios
 
 const updateUser = (index, user) => {
-  console.log(index);
-  console.log(user);
   document.getElementById("name").value = user.name;
   document.getElementById("lastname").value = user.lastName;
   document.getElementById("email").value = user.email;

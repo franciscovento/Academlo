@@ -27,6 +27,9 @@ let cars = [
 let containerTarjetasUI = document.getElementById("container-tarjetas");
 let AgregarElemento = document.getElementById("Formulario");
 
+let updateFlag = false;
+let updateIndex = null;
+
 
 const renderTarjetas = arreglo => {
 
@@ -59,6 +62,7 @@ const renderTarjetas = arreglo => {
 
         let buttonEditar = document.createElement("button");
         buttonEditar.className = "item-1 btns btns_secondary BtnEditar";
+        buttonEditar.addEventListener("click", () => editarElementoLista(arreglo, index));
         buttonEditar.id = "BtnEditar";
         buttonEditar.innerHTML = `<span class="material-icons">edit</span>`
         tarjetaBtns.appendChild(buttonEditar);
@@ -76,27 +80,37 @@ const renderTarjetas = arreglo => {
 const agregarElementoLista = event => {
 
     event.preventDefault();
-    let name = document.getElementById("name");
-    let model = document.getElementById("model");
-    let doors = document.getElementById("doors");
-    let color = document.getElementById("color");
-    let brand = document.getElementById("brand");
 
-    if (name.value == "" || model.value == "" || doors.value == "" || color.value == "" || brand.value == "") {
+    if (document.getElementById("name").value == "" || document.getElementById("model").value == "" || document.getElementById("doors").value == "" || document.getElementById("color").value == "" || document.getElementById("brand").value == "") {
         alert("No pueden haber campos vacios");
-    } else{
+
+    } else if (updateFlag == true){
+      let elementoUpdate = {
+        name: document.getElementById("name").value,
+        model: document.getElementById("model").value,
+        doors: document.getElementById("doors").value,
+        color: document.getElementById("color").value,
+        brand: document.getElementById("brand").value
+    };
+
+    cars[updateIndex] = elementoUpdate;
+    updateFlag = false;
+    updateIndex = null;
+    renderTarjetas(cars);
+
+    } else {
         let elemento = {
-            name: name.value,
-            model: model.value,
-            doors: doors.value,
-            color: color.value,
-            brand: brand.value
+          name: document.getElementById("name").value,
+          model: document.getElementById("model").value,
+          doors: document.getElementById("doors").value,
+          color: document.getElementById("color").value,
+          brand: document.getElementById("brand").value
         };
         cars.push(elemento);
         renderTarjetas(cars);
-        AgregarElemento.reset();
+        
     }
-
+    AgregarElemento.reset();
 
 }
 
@@ -104,6 +118,17 @@ const eliminarElementoLista = (arreglo, index) => {
     arreglo.splice(index,1);
     renderTarjetas(cars);
   }
+
+const editarElementoLista = (arreglo, index) => {
+    document.getElementById("name").value = arreglo[index].name;
+    document.getElementById("model").value = arreglo[index].model;
+    document.getElementById("doors").value = arreglo[index].doors;
+    document.getElementById("color").value = arreglo[index].color;
+    document.getElementById("brand").value = arreglo[index].brand;
+    updateIndex = index;
+    updateFlag = true;
+
+}
 
 renderTarjetas(cars);
 AgregarElemento.addEventListener("submit", agregarElementoLista);
