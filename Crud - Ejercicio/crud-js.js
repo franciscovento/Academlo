@@ -97,6 +97,7 @@ const agregarElementoLista = event => {
     updateFlag = false;
     updateIndex = null;
     renderTarjetas(cars);
+    AgregarElemento.reset();
 
     } else {
         let elemento = {
@@ -108,9 +109,9 @@ const agregarElementoLista = event => {
         };
         cars.push(elemento);
         renderTarjetas(cars);
-        
+        AgregarElemento.reset();
     }
-    AgregarElemento.reset();
+    
 
 }
 
