@@ -12,13 +12,6 @@ let cars = [
         doors: 5,
         color: "red",
         brand: "mazda"
-      },
-      {
-        name: "Toyota",
-        model: "2019",
-        doors: 5,
-        color: "red",
-        brand: "mazda"
       }
   ]
 
@@ -29,6 +22,19 @@ let AgregarElemento = document.getElementById("Formulario");
 
 let updateFlag = false;
 let updateIndex = null;
+
+
+// función para guardar en localStorage
+
+const userStorage = () => {
+  if  (typeof Storage !== "undefined"){
+  
+  localStorage.setItem("userStorage", JSON.stringify(cars));
+   
+  } else {
+    alert("Tu navegador no es compatible con este almacenamiento");
+  }
+};
 
 
 const renderTarjetas = arreglo => {
@@ -130,6 +136,8 @@ const editarElementoLista = (arreglo, index) => {
     updateFlag = true;
 
 }
+
+
 
 renderTarjetas(cars);
 AgregarElemento.addEventListener("submit", agregarElementoLista);
