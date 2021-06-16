@@ -102,10 +102,13 @@ const renderTarjetas = arreglo => {
 const agregarElementoLista = event => {
 
     event.preventDefault();
+    if (cars === null) {
+      cars = [];
+    } else {
 
     if (document.getElementById("name").value == "" || document.getElementById("model").value == "" || document.getElementById("doors").value == "" || document.getElementById("color").value == "" || document.getElementById("brand").value == "") {
         alert("No pueden haber campos vacios");
-
+        
     } else if (updateFlag == true){
       let elementoUpdate = {
         name: document.getElementById("name").value,
@@ -135,7 +138,7 @@ const agregarElementoLista = event => {
         autosStorage();
         AgregarElemento.reset();
     }
-    
+  } 
 
 }
 
