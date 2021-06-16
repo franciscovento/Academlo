@@ -102,14 +102,26 @@ const renderTarjetas = arreglo => {
 const agregarElementoLista = event => {
 
     event.preventDefault();
-    if (cars === null) {
-      cars = [];
-    } else {
-
+    
     if (document.getElementById("name").value == "" || document.getElementById("model").value == "" || document.getElementById("doors").value == "" || document.getElementById("color").value == "" || document.getElementById("brand").value == "") {
-        alert("No pueden haber campos vacios");
-        
-    } else if (updateFlag == true){
+      alert("No pueden haber campos vacios");
+
+    } else if (cars === null) {
+      cars = [];
+      let elemento = {
+        name: document.getElementById("name").value,
+        model: document.getElementById("model").value,
+        doors: document.getElementById("doors").value,
+        color: document.getElementById("color").value,
+        brand: document.getElementById("brand").value
+      };
+      cars.push(elemento);
+      renderTarjetas(cars);
+      autosStorage();
+      AgregarElemento.reset();
+
+    } else if(updateFlag == true) {
+
       let elementoUpdate = {
         name: document.getElementById("name").value,
         model: document.getElementById("model").value,
@@ -124,7 +136,7 @@ const agregarElementoLista = event => {
     renderTarjetas(cars);
     autosStorage();
     AgregarElemento.reset();
-
+        
     } else {
         let elemento = {
           name: document.getElementById("name").value,
@@ -138,8 +150,6 @@ const agregarElementoLista = event => {
         autosStorage();
         AgregarElemento.reset();
     }
-  } 
-
 }
 
 const eliminarElementoLista = (arreglo, index) => {
