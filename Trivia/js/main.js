@@ -104,9 +104,7 @@ const getQuestions = e => {
       });
   };
 
-  const nextQuestions = () => {
-      console.log(qIndex);
-      console.log("la puntuación es " + score)
+const nextQuestions = () => {
     if (qIndex == amount.value) {
       showFinalResults();
       return;
@@ -146,11 +144,10 @@ const getQuestions = e => {
   
     document.getElementById("question_index").innerHTML = qIndex + 1;
     document.getElementById("num_questions").innerHTML = amount.value;
-    console.log("la respuesta correcta es " + correct_index_answer);
+    // console.log("la respuesta correcta es " + correct_index_answer);
   };
   
 const selectAnswer = (id) =>{
-    console.log(id);
     if (id == correct_index_answer) {
         score += 1;
         player.puntuacion = score;
@@ -235,29 +232,7 @@ for (let i = 0; i < answers.length; i++) {
     buttonVolver.setAttribute("class", "btns btns-answers btns-back");
     buttonVolver.innerText = "Volver a intentar";
     enlace.appendChild(buttonVolver);
-
-
-  //   questionContent.innerHTML = 
-  //   `<h2>¡Haz conseguido <span class="trivia-game-span">${score} puntos!</span></h2>
-  //   <h4>...de un total de ${amount.value} preguntas</h4>
-  //   <table id="users-table">
-  //   <thead>
-  //     <tr>
-  //       <th class="head-table">Nombre</th>
-  //       <th class="head-table">Preguntas</th>
-  //       <th class="head-table">Puntos</th>
-  //     </tr>
-  //   </thead>
-  //   <tbody>
-  //       <tr>
-  //           <td class="content-table">Gonzalo</td>
-  //           <td class="content-table">10</td>
-  //           <td class="content-table">7 Pts.</td>
-  //        </tr>
-  //   </tbody>
-  // </table>`
   };
-
 
 
 // EVENTOS
