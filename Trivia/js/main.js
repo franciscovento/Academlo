@@ -175,39 +175,85 @@ for (let i = 0; i < answers.length; i++) {
 
 
   const showFinalResults = () => {
-    questionContent.innerHTML = `<h2>¡Haz conseguido <span class="trivia-game-span">${score} puntos!</span></h2>
-    <h4>...de un total de ${amount.value} preguntas</h4>
-    <table id="users-table">
-    <thead>
-      <tr>
-        <th class="head-table">Nombre</th>
-        <th class="head-table">Preguntas</th>
-        <th class="head-table">Puntos</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="content-table">Gonzalo</td>
-            <td class="content-table">10</td>
-            <td class="content-table">7 Pts.</td>
-          </tr>
-          <tr>
-            <td class="content-table">Gonzalo</td>
-            <td class="content-table">10</td>
-            <td class="content-table">7 Pts.</td>
-          </tr>
-          <tr>
-            <td class="content-table">Gonzalo</td>
-            <td class="content-table">10</td>
-            <td class="content-table">7 Pts.</td>
-          </tr>
-          <tr>
-            <td class="content-table">Gonzalo</td>
-            <td class="content-table">10</td>
-            <td class="content-table">7 Pts.</td>
-          </tr>
-    </tbody>
-  </table>`
+
+    questionContent.innerHTML = "";
+    let encabezado = document.createElement("div");
+    encabezado.innerHTML = `<h2>¡Haz conseguido <span class="trivia-game-span">${score} puntos!</span></h2>
+    <h4>...de un total de ${amount.value} preguntas</h4>`
+    questionContent.appendChild(encabezado);
+
+    let table = document.createElement("table");
+    table.setAttribute("id", "users-table");
+    questionContent.appendChild(table);
+
+    let thead = document.createElement("thead");
+    table.appendChild(thead);
+
+    let trHead = document.createElement("tr");
+    thead.appendChild(trHead);
+
+    let thName = document.createElement("th");
+    thName.setAttribute("class", "head-table");
+    thName.innerText = "Nombre";
+    trHead.appendChild(thName);
+
+    let thPuntos = document.createElement("th");
+    thPuntos.setAttribute("class", "head-table");
+    thPuntos.innerText = "Puntos";
+    trHead.appendChild(thPuntos);
+
+    let tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+
+    let trContent = document.createElement("tr");
+    tbody.appendChild(trContent);
+
+    puntuaciones.forEach(element => {
+
+      let trContent = document.createElement("tr");
+      tbody.appendChild(trContent);
+
+      let tdNAme = document.createElement("td");
+      tdNAme.setAttribute("class", "content-table");
+      tdNAme.innerText = element.name;
+      
+      let tdPuntos = document.createElement("td");
+      tdPuntos.setAttribute("class", "content-table");
+      tdPuntos.innerText = element.puntuacion;
+
+      trContent.appendChild(tdNAme);
+      trContent.appendChild(tdPuntos);
+    });
+
+    let enlace = document.createElement("a");
+    enlace.setAttribute("href","index.html");
+    questionContent.appendChild(enlace);
+
+    let buttonVolver = document.createElement("button");
+    buttonVolver.setAttribute("class", "btns btns-answers");
+    buttonVolver.innerText = "Volver a intentar";
+    enlace.appendChild(buttonVolver);
+
+
+  //   questionContent.innerHTML = 
+  //   `<h2>¡Haz conseguido <span class="trivia-game-span">${score} puntos!</span></h2>
+  //   <h4>...de un total de ${amount.value} preguntas</h4>
+  //   <table id="users-table">
+  //   <thead>
+  //     <tr>
+  //       <th class="head-table">Nombre</th>
+  //       <th class="head-table">Preguntas</th>
+  //       <th class="head-table">Puntos</th>
+  //     </tr>
+  //   </thead>
+  //   <tbody>
+  //       <tr>
+  //           <td class="content-table">Gonzalo</td>
+  //           <td class="content-table">10</td>
+  //           <td class="content-table">7 Pts.</td>
+  //        </tr>
+  //   </tbody>
+  // </table>`
   };
 
 
