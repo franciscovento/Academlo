@@ -143,3 +143,16 @@
     }
 }
 
+
+/* TABLA DE RESULTADOS */
+#users-table{
+    width: 100%;
+}
+
+.head-table{
+    font-size: 2em;
+}
+
+.content-table{
+    font-size: 1.6em;
+}

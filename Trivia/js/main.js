@@ -175,18 +175,41 @@ for (let i = 0; i < answers.length; i++) {
 
 
   const showFinalResults = () => {
-    console.log("Listo");
     questionContent.innerHTML = `<h2>¡Haz conseguido <span class="trivia-game-span">${score} puntos!</span></h2>
     <h4>...de un total de ${amount.value} preguntas</h4>
-    <form action="" id="form-name">
-        <input type="text" placeholder="¿Cómo quieres llamarte?" form="siguiente-nombre" id="player-name">
-        <input type="submit" value="Siguiente" id="siguiente-nombre" class="btns">
-    </form>`
+    <table id="users-table">
+    <thead>
+      <tr>
+        <th class="head-table">Nombre</th>
+        <th class="head-table">Preguntas</th>
+        <th class="head-table">Puntos</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="content-table">Gonzalo</td>
+            <td class="content-table">10</td>
+            <td class="content-table">7 Pts.</td>
+          </tr>
+          <tr>
+            <td class="content-table">Gonzalo</td>
+            <td class="content-table">10</td>
+            <td class="content-table">7 Pts.</td>
+          </tr>
+          <tr>
+            <td class="content-table">Gonzalo</td>
+            <td class="content-table">10</td>
+            <td class="content-table">7 Pts.</td>
+          </tr>
+          <tr>
+            <td class="content-table">Gonzalo</td>
+            <td class="content-table">10</td>
+            <td class="content-table">7 Pts.</td>
+          </tr>
+    </tbody>
+  </table>`
   };
 
-
-
-  
 
 
 // EVENTOS
