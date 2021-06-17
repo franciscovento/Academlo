@@ -49,7 +49,7 @@ const savePlayer = event => {
     } else if (puntuaciones === null){
         puntuaciones = [];
 
-        let player = {
+            player = {
             name: document.getElementById("player-name").value,
             puntuacion: score,
         }
@@ -194,7 +194,7 @@ for (let i = 0; i < answers.length; i++) {
 
     let thName = document.createElement("th");
     thName.setAttribute("class", "head-table");
-    thName.innerText = "Nombre";
+    thName.innerText = "Ranking";
     trHead.appendChild(thName);
 
     let thPuntos = document.createElement("th");
@@ -208,7 +208,9 @@ for (let i = 0; i < answers.length; i++) {
     let trContent = document.createElement("tr");
     tbody.appendChild(trContent);
 
-    puntuaciones.forEach(element => {
+    let puntuacionesOrder = puntuaciones.sort(function (a, b) {return b.puntuacion - a.puntuacion});
+
+    puntuacionesOrder.forEach(element => {
 
       let trContent = document.createElement("tr");
       tbody.appendChild(trContent);
@@ -230,7 +232,7 @@ for (let i = 0; i < answers.length; i++) {
     questionContent.appendChild(enlace);
 
     let buttonVolver = document.createElement("button");
-    buttonVolver.setAttribute("class", "btns btns-answers");
+    buttonVolver.setAttribute("class", "btns btns-answers btns-back");
     buttonVolver.innerText = "Volver a intentar";
     enlace.appendChild(buttonVolver);
 

@@ -156,3 +156,8 @@
 .content-table{
     font-size: 1.6em;
 }
+
+/* Last button */
+.btns-back{
+    margin-top: 20px;
+}
