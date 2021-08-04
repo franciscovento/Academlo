@@ -1,6 +1,6 @@
-let str = "He is Sleeping on the couch";
-let before = "Sleeping";
-let after = "sitting";
+let str = "I think we should look up there";
+let before = "up";
+let after = "Down";
 
 
 function myReplace(str, before, after) {
@@ -13,7 +13,11 @@ function myReplace(str, before, after) {
     resp = str.replace(before, after)
    
   
-    }else{
+    }else if(after.charAt(0) === after.charAt(0).toUpperCase()){
+        after =  after.charAt(0).toLowerCase() + after.slice(1);
+        resp = str.replace(before, after)
+        
+    } else{
         resp = str.replace(before, after)
     }
   
