@@ -360,7 +360,7 @@ header {
 }
 
 .portafolio-imagenes-item-1 {
-  background-image: url(https://tomategrafico.site/media/2021/01/tomategrafico-mockup-mentaromero-1.jpg);
+  background-image: url("../imagenes/pokeImage.jpeg");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -375,7 +375,7 @@ header {
 }
 
 .portafolio-imagenes-item-2 {
-  background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-granappletours3.jpg);
+  background-image: url("../imagenes/rickyandmortyImage.jpeg");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -390,7 +390,7 @@ header {
 }
 
 .portafolio-imagenes-item-3 {
-  background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-aayllu1.jpg);
+  background-image: url("../imagenes/triviaImage.jpeg");
 
   background-position: center;
   background-repeat: no-repeat;
@@ -405,7 +405,7 @@ header {
 }
 
 .portafolio-imagenes-item-4 {
-  background-image: url(https://tomategrafico.site/media/2020/12/tomategrafico-vapebar-1536x1123.png);
+  background-image: url("../imagenes/todoImage.jpeg");
 
   background-position: center;
   background-repeat: no-repeat;
