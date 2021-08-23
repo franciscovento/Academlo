@@ -1,544 +1,482 @@
-
 /* SECCION HEADER NAV */
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 header {
-    
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color:white ;
-    position: sticky;
-    top: 0px; 
-    z-index: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
-
-.header-contenedor{
-    width: 90%;
-    margin: auto;
-    }
-
-
+.header-contenedor {
+  width: 90%;
+  margin: auto;
+}
 
 .nav {
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 20px; 
-    }
-
-.menu ul {
-        gap: 25px;
-        font-size: 1em;
-        justify-content: flex-end;
-        
-    }
-
-.menu ul a li{
-        font-size: 1.6em;
-        font-weight: 300;
-        transition: 0.5s;
-    }
-
-    .menu ul a:hover li{
-        color: #464CAC;
-        transform: scale(0.9);
-    }
-
-.menu{
-        flex-grow: 4;
-        transition: all 0.7s;
-        
-    }
-
-.menu-responsive{
-    display: none;
-    
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
+.menu ul {
+  gap: 25px;
+  font-size: 1em;
+  justify-content: flex-end;
+}
 
+.menu ul a li {
+  font-size: 1.6em;
+  font-weight: 300;
+  transition: 0.5s;
+}
 
-    @media screen and (max-width: 900px) {
-        .button-menu{
-            display: none;
-        }
-    }
+.menu ul a:hover li {
+  color: #464cac;
+  transform: scale(0.9);
+}
 
-    @media screen and (max-width:760px){
-        .menu{
-            margin-top: -150%;
-            flex-grow: 0;
-            width: 100%;
-        }
+.menu {
+  flex-grow: 4;
+  transition: all 0.7s;
+}
 
-        .open-menu-responsive{
-            margin-top: 0;  
-        }
+.menu-responsive {
+  display: none;
+}
 
-        .menu ul {
-           flex-direction: column; 
-           align-items: center;
-           
-        }
+@media screen and (max-width: 900px) {
+  .button-menu {
+    display: none;
+  }
+}
 
-        .menu-responsive{
-            display: block;
-        }
+@media screen and (max-width: 760px) {
+  .menu {
+    margin-top: -150%;
+    flex-grow: 0;
+    width: 100%;
+  }
 
-        .nav{
-            justify-content: space-between;
-            gap: 0px;
-        }
-    }
+  .open-menu-responsive {
+    margin-top: 0;
+  }
 
-    .fas{
-        font-size: 2em;
-        transition: 0.7s;
-    }
-    
-    .fas:hover{
-        transform: scale(0.9);
-    }
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .menu-responsive {
+    display: block;
+  }
 
+  .nav {
+    justify-content: space-between;
+    gap: 0px;
+  }
+}
+
+.fas {
+  font-size: 2em;
+  transition: 0.7s;
+}
+
+.fas:hover {
+  transform: scale(0.9);
+}
 
 /* SECCION HERO */
 
-.section_hero{
-    background-color: #E9F0F8;
-    background-image: url(https://elementorkits.yumnatype.com/floatkit/wp-content/uploads/sites/2/2020/12/elements-background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-   
+.section_hero {
+  background-color: #e9f0f8;
+  background-image: url(https://elementorkits.yumnatype.com/floatkit/wp-content/uploads/sites/2/2020/12/elements-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .hero {
-    display: flex;
-    min-height: 650px;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center; 
+  display: flex;
+  min-height: 650px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hero__imagen {
-    background-image: url('../imagenes/portada.jpg');
-    background-size: cover;
-    background-position: right;
-    min-height: 460px;
-    width: 360px;
-    border-radius: 10px;
-    position: relative;
+  background-image: url("../imagenes/portada.jpg");
+  background-size: cover;
+  background-position: right;
+  min-height: 460px;
+  width: 360px;
+  border-radius: 10px;
+  position: relative;
 }
 
-.hero-imagen-cards{
-    position: absolute;
-    padding: 10px;
-    font-size: 1.6em;
-    background-color: white;
-    border-radius: 8px;
-    line-height: 28px;
-    font-weight: 500px;
+.hero-imagen-cards {
+  position: absolute;
+  padding: 10px;
+  font-size: 1.6em;
+  background-color: white;
+  border-radius: 8px;
+  line-height: 28px;
+  font-weight: 500px;
 }
-
 
 .hero-imagen-card-arrow {
-    font-size: 1.2em;
-    color: #464CAC;
+  font-size: 1.2em;
+  color: #464cac;
 }
-.hero-imagen-card1{ 
-    right: -60px;
-    top: 34px;
-    
-}
-
-.hero-imagen-card2{   
-    left: -50px;
-    bottom: 60px;
-    
+.hero-imagen-card1 {
+  right: -60px;
+  top: 34px;
 }
 
-.hero-imagen-card3{ 
-    right: -35px;
-    top: 238px;
-   
+.hero-imagen-card2 {
+  left: -50px;
+  bottom: 60px;
 }
 
+.hero-imagen-card3 {
+  right: -35px;
+  top: 238px;
+}
 
-.hero__texto{
-    font-family: sans-serif;
-    width:  700px; 
-    margin-left: 100px;  
-    display: flex;
+.hero__texto {
+  font-family: sans-serif;
+  width: 700px;
+  margin-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .hero__texto {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px;
+    justify-content: center;
+  }
+
+  .hero__imagen {
+    margin-top: 10px;
+  }
+
+  .hero {
     flex-wrap: wrap;
-    gap: 10px;
+  }
 }
 
-@media screen and (max-width:760px){
-    .hero__texto{
-        text-align: center;
-        margin-top: 10px;
-        margin-left: 0px;
-        justify-content: center;
-    }
+@media screen and (max-width: 540px) {
+  .hero__texto h1 {
+    font-size: 4.2em;
+  }
 
-    .hero__imagen{
-        margin-top: 10px;
-    }
+  .hero-imagen-card1 {
+    right: -12px;
+    top: 34px;
+  }
 
-    .hero{
-        flex-wrap: wrap;
-       
-    }  
-    
+  .hero-imagen-card2 {
+    left: -15px;
+    bottom: 60px;
+  }
+
+  .hero-imagen-card3 {
+    right: -8px;
+    top: 277px;
+  }
 }
 
-@media screen and (max-width:540px){
-
-    .hero__texto h1 {
-        font-size: 4.2em;
-    }
-
-    .hero-imagen-card1{ 
-        right: -12px;
-        top: 34px;
-        
-    }
-    
-    .hero-imagen-card2{   
-        left: -15px;
-        bottom: 60px;
-        
-    }
-    
-    .hero-imagen-card3{ 
-        right: -8px;
-        top: 277px;
-       
-    }
+.hero__texto h3 {
+  color: blue;
 }
-
-.hero__texto h3{
-    color: blue;
-}
-
 
 /* Sección EXPERIENCIA */
 
 /* EXPERIENCIA - skills */
 
-.skills___title{
-    font-weight: 800;
-    font-size: 3.2em;
-    padding-bottom: 16px; 
+.skills___title {
+  font-weight: 800;
+  font-size: 3.2em;
+  padding-bottom: 16px;
 }
 
-@media screen and (max-width:900px){
-    #experiencia_id{
-        width: 100%;
-    }
+@media screen and (max-width: 900px) {
+  #experiencia_id {
+    width: 100%;
+  }
 }
-
 
 /* EXPERIENCIA - Barra de Progreso */
 .progress-bar {
-    background-color: #464CAC;
-    justify-content: flex-end;
-    
+  background-color: #464cac;
+  justify-content: flex-end;
 }
 
 .progress-bar span {
-    font-size: 1.2em;
-    padding-right: 10px;
-    color: white; 
+  font-size: 1.2em;
+  padding-right: 10px;
+  color: white;
 }
 
-.progress-bar___bar-rigth{
-    background-color: #DAE1E9;
-    border-radius: 0 10px 10px 0;
+.progress-bar___bar-rigth {
+  background-color: #dae1e9;
+  border-radius: 0 10px 10px 0;
 }
 
 .skills ul li {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
 
 /* SKILLS - tarjetas */
 
-.timeline{
-    flex-direction: column;
-    
+.timeline {
+  flex-direction: column;
 }
 
 .titulo-card {
-    font-size: 2.4em;
-    font-weight: 600;
-
+  font-size: 2.4em;
+  font-weight: 600;
 }
 
-.referencia-card{
-    color:#676765 ;
+.referencia-card {
+  color: #676765;
 }
 
-.timeline___card{
-    padding: 16px;
-    border-radius: 8px;
-    transition: 0.5s;
+.timeline___card {
+  padding: 16px;
+  border-radius: 8px;
+  transition: 0.5s;
 }
 
-.timeline___card1{
-    padding: 10px;
+.timeline___card1 {
+  padding: 10px;
 }
 
-.año-card{
-    font-weight: 500;
+.año-card {
+  font-weight: 500;
 }
 
 .año-card::after {
-    content: " →";
-  }
+  content: " →";
+}
 
 .timeline___card:hover {
-    box-shadow: -1px 1px 23px -13px rgba(0,0,0,0.7);
--webkit-box-shadow: -1px 1px 23px -13px rgba(0,0,0,0.7);
--moz-box-shadow: -1px 1px 23px -13px rgba(0,0,0,0.7);
+  box-shadow: -1px 1px 23px -13px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px 1px 23px -13px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px 1px 23px -13px rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width:900px){
-    #timeline_id{
-        width: 100%;
-        margin-top: 50px;
-    }
-    
+@media screen and (max-width: 900px) {
+  #timeline_id {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 
-.imagen-icono{
-    width: 50px;
+.imagen-icono {
+  width: 50px;
 }
-
 
 /* Sección SERVICIOS */
 
 /* Servicios - Cajas */
 
-
-.servicios___title{
-    font-weight: 800;
-    font-size: 3.2em;
-    padding-bottom: 16px; 
+.servicios___title {
+  font-weight: 800;
+  font-size: 3.2em;
+  padding-bottom: 16px;
 }
 
-
-@media screen and (max-width:900px){
-    #servicios-texto{
-        width: 100%;
-    }
+@media screen and (max-width: 900px) {
+  #servicios-texto {
+    width: 100%;
+  }
 }
 
-.servicios-iconos{
-    align-items: center;
-    justify-content: center;
+.servicios-iconos {
+  align-items: center;
+  justify-content: center;
 }
 
-.servicios-iconos___caja{
-    width: 50%;
-    padding: 24px;
-   
+.servicios-iconos___caja {
+  width: 50%;
+  padding: 24px;
 }
 
-.servicios-iconos___caja1{
-    background-color: #FEF4F5;
+.servicios-iconos___caja1 {
+  background-color: #fef4f5;
 }
 
-@media screen and (max-width:900px){
-    #servicios-iconos{
-        width: 100%;
-        margin-top: 10px;
-    }
+@media screen and (max-width: 900px) {
+  #servicios-iconos {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
-@media screen and (max-width:700px){
-    .servicios-iconos___caja{
-        width: 100%;
-        margin-top: 10px;
-    }
+@media screen and (max-width: 700px) {
+  .servicios-iconos___caja {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
-
 
 /* Sección PORTAFOLIO */
 
-.portafolio-text{
-    text-align: center;
+.portafolio-text {
+  text-align: center;
 }
 
-.portafolio-imagenes{
-    flex-wrap: wrap;
-    margin-top: 50px;
-    
+.portafolio-imagenes {
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
-.portafolio-imagenes-item{
-    height: 400px;
-    background-color: lemonchiffon;
-    width: 25%;
-    
-    
+.portafolio-imagenes-item {
+  height: 400px;
+  background-color: lemonchiffon;
+  width: 25%;
+  cursor: pointer;
 }
 
-@media screen and (max-width:700px){
-    .portafolio-imagenes-item{
-        width: 100%;
-        height: 200px;
-        
-    }
+@media screen and (max-width: 700px) {
+  .portafolio-imagenes-item {
+    width: 100%;
+    height: 200px;
+  }
 
-    .portafolio-imagenes{
-        margin-top: 20px;
-        
-    }
-    
+  .portafolio-imagenes {
+    margin-top: 20px;
+  }
 }
 
+.portafolio-imagenes-item-1 {
+  background-image: url(https://tomategrafico.site/media/2021/01/tomategrafico-mockup-mentaromero-1.jpg);
 
-.portafolio-imagenes-item-1{
-    background-image: url(https://tomategrafico.site/media/2021/01/tomategrafico-mockup-mentaromero-1.jpg);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
-    transition: 0.7s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.7s;
 }
 
 .portafolio-imagenes-item-1:hover {
-    transform: scale(1.1); 
-    filter: grayscale(0%);
-  }
-
-  .portafolio-imagenes-item-2{
-    background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-granappletours3.jpg);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
-    transition: 0.7s;
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
+.portafolio-imagenes-item-2 {
+  background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-granappletours3.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.7s;
+}
 
 .portafolio-imagenes-item-2:hover {
-    transform: scale(1.1); 
-    filter: grayscale(0%);
-  }
-
-  .portafolio-imagenes-item-3{
-    background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-aayllu1.jpg);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
-    transition: 0.7s;
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
+.portafolio-imagenes-item-3 {
+  background-image: url(https://tomategrafico.site/media/2021/01/Tomategrafico-mockup-aayllu1.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.7s;
+}
 
 .portafolio-imagenes-item-3:hover {
-    transform: scale(1.1); 
-    filter: grayscale(0%);
-  }
-
-  .portafolio-imagenes-item-4{
-    background-image: url(https://tomategrafico.site/media/2020/12/tomategrafico-vapebar-1536x1123.png);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
-    transition: 0.7s;
-   
- 
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
+.portafolio-imagenes-item-4 {
+  background-image: url(https://tomategrafico.site/media/2020/12/tomategrafico-vapebar-1536x1123.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.7s;
+}
 
 .portafolio-imagenes-item-4:hover {
-    transform: scale(1.1); 
-    filter: grayscale(0%);
-    
-
-  }
-
-
-
-  
-
-  /* Sección CONTRATAME */
-
-.section_contratame{
-    background-color: #E9F0F8;
-    background-image: url(https://elementorkits.yumnatype.com/floatkit/wp-content/uploads/sites/2/2020/12/elements-background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
+/* Sección CONTRATAME */
 
-.contratame-contenedor{
-    min-height: 370px;
-    align-items: center;
-    flex-wrap: wrap;
+.section_contratame {
+  background-color: #e9f0f8;
+  background-image: url(https://elementorkits.yumnatype.com/floatkit/wp-content/uploads/sites/2/2020/12/elements-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.contratame-contenedor {
+  min-height: 370px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .contratame___title {
-    font-weight: 800;
-    font-size: 3.5em;
-    padding-bottom: 16px;
-    margin-right: 50px;
+  font-weight: 800;
+  font-size: 3.5em;
+  padding-bottom: 16px;
+  margin-right: 50px;
 }
 
+@media screen and (max-width: 700px) {
+  #contratame__texto {
+    width: 100%;
+    text-align: center;
+  }
 
+  #contratame-parrafo {
+    width: 100%;
+    text-align: center;
+  }
 
-@media screen and (max-width:700px){
-    #contratame__texto {
-        width: 100%;
-        text-align: center;
-
-    }
-
-    #contratame-parrafo{
-        width: 100%;
-        text-align: center;
-    }
-
-    .contratame___title {
-        margin-right: 0px;
-    }
-    
-    
+  .contratame___title {
+    margin-right: 0px;
+  }
 }
-
 
 /* Sección CONTACTO */
 
-.section_contacto{
-    background-color: #FBFCFE;
+.section_contacto {
+  background-color: #fbfcfe;
 }
 
-.contacto-texto{
-    text-align: center;
-    height: 300px;
-    flex-direction: column;
-    justify-content: center;
+.contacto-texto {
+  text-align: center;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.contacto-img{
-    justify-content: center;
-    margin-top: 10px;
+.contacto-img {
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.contacto-img img{
-    width: 28px;
-    padding: 4px;  
+.contacto-img img {
+  width: 28px;
+  padding: 4px;
 }

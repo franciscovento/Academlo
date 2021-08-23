@@ -37,6 +37,23 @@ function mostrarScrollArriba(){
     } 
 }
 
+
 window.addEventListener('scroll', mostrarScrollIzquierda);
 window.addEventListener('scroll', mostrarScrollDerecha);
 window.addEventListener('scroll', mostrarScrollArriba);
+
+
+let item1 = document.getElementById('portafolio-imagenes-item-1')
+let item2 = document.getElementById('portafolio-imagenes-item-2')
+let item3 = document.getElementById('portafolio-imagenes-item-3')
+let item4 = document.getElementById('portafolio-imagenes-item-4')
+
+const reDirectPortafolio = (url) => {
+    window.open(url, '_blank');
+}
+
+
+item1.addEventListener('click',() => reDirectPortafolio('https://pokedexreact-zeta.vercel.app/#/'));
+item2.addEventListener('click',() => reDirectPortafolio('https://rikiandmortyapp.vercel.app/'));
+item3.addEventListener('click',() => reDirectPortafolio('https://trivia-blond.vercel.app/index.html'));
+item4.addEventListener('click',() => reDirectPortafolio('https://excercise-todolist.vercel.app/'));
